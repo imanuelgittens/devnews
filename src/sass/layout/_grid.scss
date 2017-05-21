@@ -7,7 +7,7 @@
 $grid-total-columns: 16;
 
 //adjust gutter space using this variable
-$gutter: 1em;
+$gutter: 0.5em;
 
 /******************************************************************************
                               Grid component
@@ -30,14 +30,16 @@ $gutter: 1em;
 
   //Modifiers
   &--gutters{
+    margin-top: -$gutter;
     margin-left: -$gutter;
     > .grid__col{ //give columns gutter space
+      padding-top: $gutter;
       padding-left: $gutter;
       margin-bottom: $gutter;
     }
   }
 
-  &--center{
+  &--middle{
     align-items: center;
   }
 
@@ -52,7 +54,7 @@ $gutter: 1em;
 
 //Mobile First Responsive Grid
 
-@media screen and (min-width: 500px){
+@media screen and (min-width: 610px){
   .grid{
     &__row{
       flex-direction: row; //on larger screens grid is horizontal

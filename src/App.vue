@@ -32,13 +32,19 @@
       </div>
     </header>
 
+    <side-menu></side-menu>
+
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+
+import SideMenu from './components/Sidemenu.vue'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {SideMenu}
 }
 </script>
 
